@@ -24,17 +24,19 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
-    namespace 'com.shekarmudaliyar.social_share'
+
+    compileSdk = 35
+    ndkVersion = "27.0.12077973" //flutter.ndkVersion
+    namespace("com.shekarmudaliyar.social_share")
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_21 //JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_21 //JavaVersion.VERSION_1_8
     }
 
-    //kotlinOptions {
-      //  jvmTarget = "1.8"
-    //}
+    kotlinOptions {
+        jvmTarget = "2.1"
+    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
