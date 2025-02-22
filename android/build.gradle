@@ -2,14 +2,14 @@ group = "com.shekarmudaliyar.social_share.social_share"
 version = "1.0-SNAPSHOT"
 
 buildscript {
-    ext.kotlin_version = "1.8.22"
+    ext.kotlin_version = '1.9.10'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:8.1.0")
+        classpath 'com.android.tools.build:gradle:8.7.0'
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
     }
 }
@@ -27,15 +27,19 @@ apply plugin: "kotlin-android"
 android {
     namespace = "com.shekarmudaliyar.social_share.social_share"
 
-    compileSdk = 35
+    if (project.android.hasProperty("namespace")) {
+        namespace = "com.shekarmudaliyar.social_share"
+    }
+
+    compileSdk = 34
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11
+        jvmTarget = '11'
     }
 
     sourceSets {
@@ -44,7 +48,7 @@ android {
     }
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 16
     }
 
     dependencies {
