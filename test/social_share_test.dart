@@ -1,29 +1,23 @@
+// import 'package:flutter/services.dart';
 // import 'package:flutter_test/flutter_test.dart';
 // import 'package:social_share/social_share.dart';
-// import 'package:social_share/social_share_platform_interface.dart';
-// import 'package:social_share/social_share_method_channel.dart';
-// import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-// class MockSocialSharePlatform
-//     with MockPlatformInterfaceMixin
-//     implements SocialSharePlatform {
+void main() {
+  // const MethodChannel channel = MethodChannel('social_share');
 
-//   @override
-//   Future<String?> getPlatformVersion() => Future.value('42');
-// }
+  // TestWidgetsFlutterBinding.ensureInitialized();
 
-// void main() {
-//   final SocialSharePlatform initialPlatform = SocialSharePlatform.instance;
+  // setUp(() {
+  //   channel.setMockMethodCallHandler((MethodCall methodCall) async {
+  //     return '42';
+  //   });
+  // });
 
-//   test('$MethodChannelSocialShare is the default instance', () {
-//     expect(initialPlatform, isInstanceOf<MethodChannelSocialShare>());
-//   });
+  // tearDown(() {
+  //   channel.setMockMethodCallHandler(null);
+  // });
 
-//   test('getPlatformVersion', () async {
-//     SocialShare socialSharePlugin = SocialShare();
-//     MockSocialSharePlatform fakePlatform = MockSocialSharePlatform();
-//     SocialSharePlatform.instance = fakePlatform;
-
-//     expect(await socialSharePlugin.getPlatformVersion(), '42');
-//   });
-// }
+  // test('getPlatformVersion', () async {
+  //   expect(await SocialShare.platformVersion, '42');
+  // });
+}

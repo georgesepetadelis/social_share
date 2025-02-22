@@ -1,8 +1,3 @@
-## 2.4.0
-
-- converted old obj c to swift for ios
-- improved overall code 
-
 ## 2.3.1
 
 ### Changes for the new version is done by [dpacchi](https://github.com/dpacchi) 🙌🙌

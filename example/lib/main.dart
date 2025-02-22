@@ -10,8 +10,6 @@ import 'package:social_share/social_share.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -108,7 +106,9 @@ class _MyAppState extends State<MyApp> {
                             imagePath: path,
                             backgroundTopColor: "#ffffff",
                             backgroundBottomColor: "#000000",
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                       ),
                       SizedBox(width: 20),
@@ -123,7 +123,9 @@ class _MyAppState extends State<MyApp> {
                             appId: facebookId,
                             imagePath: path,
                             backgroundResourcePath: imageBackgroundPath,
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                       ),
                       SizedBox(width: 20),
@@ -138,7 +140,9 @@ class _MyAppState extends State<MyApp> {
                             appId: facebookId,
                             imagePath: path,
                             backgroundResourcePath: videoBackgroundPath,
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                       ),
                     ],
@@ -164,7 +168,9 @@ class _MyAppState extends State<MyApp> {
                             imagePath: path,
                             backgroundTopColor: "#ffffff",
                             backgroundBottomColor: "#000000",
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                       ),
                       SizedBox(width: 20),
@@ -179,7 +185,9 @@ class _MyAppState extends State<MyApp> {
                             appId: facebookId,
                             imagePath: path,
                             backgroundResourcePath: imageBackgroundPath,
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                       ),
                       SizedBox(width: 20),
@@ -194,7 +202,9 @@ class _MyAppState extends State<MyApp> {
                             appId: facebookId,
                             imagePath: path,
                             backgroundResourcePath: videoBackgroundPath,
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                       ),
                     ],
@@ -221,7 +231,9 @@ class _MyAppState extends State<MyApp> {
                             ],
                             url: "https://google.com/hello",
                             trailingText: "cool!!",
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                       ),
                     ],
@@ -240,7 +252,9 @@ class _MyAppState extends State<MyApp> {
                         onPressed: () async {
                           SocialShare.copyToClipboard(
                             image: await screenshot(),
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                       ),
                       SizedBox(width: 20),
@@ -249,7 +263,9 @@ class _MyAppState extends State<MyApp> {
                         onPressed: () async {
                           SocialShare.copyToClipboard(
                             text: "This is Social Share plugin",
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                       ),
                     ],
@@ -270,7 +286,9 @@ class _MyAppState extends State<MyApp> {
                             "This is Social Share Sms example",
                             url: "https://google.com/",
                             trailingText: "\nhello",
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                       ),
                     ],
@@ -287,8 +305,9 @@ class _MyAppState extends State<MyApp> {
                       ElevatedButton(
                         child: Icon(Icons.text_fields),
                         onPressed: () async {
-                          SocialShare.shareOptions("Hello world")
-                              .then((data) {});
+                          SocialShare.shareOptions("Hello world").then((data) {
+                            print(data);
+                          });
                         },
                       ),
                     ],
@@ -306,7 +325,9 @@ class _MyAppState extends State<MyApp> {
                         onPressed: () async {
                           SocialShare.shareWhatsapp(
                             "Hello World \n https://google.com",
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                         child: Icon(Icons.text_fields),
                       ),
@@ -325,7 +346,9 @@ class _MyAppState extends State<MyApp> {
                         onPressed: () async {
                           SocialShare.shareTelegram(
                             "Hello World \n https://google.com",
-                          ).then((data) {});
+                          ).then((data) {
+                            print(data);
+                          });
                         },
                         child: Icon(Icons.text_fields),
                       ),
@@ -343,8 +366,9 @@ class _MyAppState extends State<MyApp> {
                       ElevatedButton(
                         child: Icon(Icons.text_fields),
                         onPressed: () async {
-                          SocialShare.checkInstalledAppsForShare()
-                              .then((data) {});
+                          SocialShare.checkInstalledAppsForShare().then((data) {
+                            print(data.toString());
+                          });
                         },
                       ),
                     ],
