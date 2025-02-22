@@ -28,19 +28,19 @@ android {
     namespace 'com.shekarmudaliyar.social_share'
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_21 //JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_21 //JavaVersion.VERSION_1_8
     }
 
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+    //kotlinOptions {
+      //  jvmTarget = "1.8"
+    //}
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 24
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
